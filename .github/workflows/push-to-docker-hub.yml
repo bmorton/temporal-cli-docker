@@ -23,8 +23,10 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
         name: Build and push
-        uses: docker/build-push-action@v3
+        uses: docker/build-push-action@v4
         with:
           push: true
           platforms: linux/amd64,linux/arm64
           tags: bmorton/temporal-cli:${{ github.ref_name }}
+          build-args: |
+            CLI_VERSION=${{ github.ref_name }}

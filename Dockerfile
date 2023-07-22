@@ -1,5 +1,5 @@
 FROM ubuntu:23.04
-ARG version=0.10.3
+ARG CLI_VERSION=0.10.3
 
 RUN apt-get update && apt-get install -y curl
 
