@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y curl
 
 WORKDIR /usr/local/bin
 RUN ARCH=`dpkg --print-architecture` && \
-      curl -L https://github.com/temporalio/cli/releases/download/v{$version}/temporal_cli_{$version}_linux_{$ARCH}.tar.gz | tar -xz && \
+      curl -L https://github.com/temporalio/cli/releases/download/v{$CLI_VERSION}/temporal_cli_{$CLI_VERSION}_linux_{$ARCH}.tar.gz | tar -xz && \
       chmod +x /usr/local/bin/temporal
 
 EXPOSE 7233
