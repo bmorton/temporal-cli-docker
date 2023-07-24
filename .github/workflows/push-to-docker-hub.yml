@@ -27,6 +27,6 @@ jobs:
         with:
           push: true
           platforms: linux/amd64,linux/arm64
-          tags: bmorton/temporal-cli:v${{ github.ref_name }}
+          tags: bmorton/temporal-dev:v${{ github.ref_name }}
           build-args: |
             CLI_VERSION=${{ github.ref_name }}
